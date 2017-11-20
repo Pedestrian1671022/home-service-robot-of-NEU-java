@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <org.ros.android.view.RosImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:layout_weight=".25" />
+
+        <LinearLayout
+            android:id="@+id/side_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".75"
+            android:gravity="right"
+            android:orientation="vertical" >
+
+            <org.ros.android.view.visualization.VisualizationView
+                android:id="@+id/map_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:layout_weight=".25" />
+
+            <com.example.pedestrian.homeservicerobotofneu.VirtualJoystickView
+                android:id="@+id/virtual_joystick"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:adjustViewBounds="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Preferences">
+
+    <PreferenceScreen
+        android:icon="@drawable/ic_action_topics"
+        android:summary="@string/topic_pref_summary"
+        android:title="@string/topic_pref_title">
+
+        <com.example.pedestrian.homeservicerobotofneu.BetterEditTextPreference
+            android:defaultValue="Robot"
+            android:key="ROBOT_NAME_KEY"
+            android:singleLine="true"
+            android:summary="Name that your Mengjia owns."
+            android:title="Robot Name" />
+
+        <com.example.pedestrian.homeservicerobotofneu.BetterEditTextPreference
+            android:defaultValue="http://localhost:11311"
+            android:key="MASTER_URI_KEY"
+            android:singleLine="true"
+            android:summary="IP address that your Mengjia connects."
+            android:title="Default MASTER URI" />
+
+        <com.example.pedestrian.homeservicerobotofneu.BetterEditTextPreference
+            android:defaultValue="/pc_remote_control"
+            android:key="PC_VOICE_TOPIC_KEY"
+            android:singleLine="true"
+            android:summary="Topic that your Mengjia publishes orders on.\nExpected message type: std_msgs.String\nValue: %s"
+            android:title="PC Voice Topic" />
+
+        <com.example.pedestrian.homeservicerobotofneu.BetterEditTextPreference
+            android:defaultValue="/android_remote_control"
+            android:key="ANDROID_VOICE_TOPIC_KEY"
+            android:singleLine="true"
+            android:summary="Topic that your Mengjia get response of orders from.\nExpected message type: std_msgs.String\nValue: %s"
+            android:title="Android Voice Topic" />
+
+        <com.example.pedestrian.homeservicerobotofneu.BetterEditTextPreference
+            android:defaultValue="/camera/rgb/image_color/compressed"
+            android:key="CAMERA_TOPIC_KEY"
+            android:singleLine="true"
+            android:summary="Topic that your Mengjia get camera information from.\nExpected message type: sensor_msgs.CompressedImage\nValue: %s"
+            android:title="Camera Topic" />
+
+        <com.example.pedestrian.homeservicerobotofneu.BetterEditTextPreference
+            android:defaultValue="/mobile_base/commands/velocity"
+            android:key="JOYSTICK_TOPIC_KEY"
+            android:singleLine="true"
+            android:summary="Topic that your Home Service publishes speed and rotation on.\nExpected message type: std_msgs.Twist\nValue: %s"
+            android:title="Joystick Topic" />
+
+        <com.example.pedestrian.homeservicerobotofneu.BetterEditTextPreference
+            android:defaultValue="/odom"
+            android:key="ODOMETRY_TOPIC_KEY"
+            android:singleLine="true"
+            android:summary="Topic that your Mengjia gets odometry data from.\nExpected message type: nav_msgs.Odometry\nValue: %s"
+            android:title="Odometry Topic" />
+
+        <com.example.pedestrian.homeservicerobotofneu.BetterEditTextPreference
+            android:defaultValue="/scan"
+            android:key="SCAN_TOPIC_KEY"
+            android:singleLine="true"
+            android:summary="Topic that your Mengjia get laser scan information from.\nExpected message type: sensor_msgs.LaserScan\nValue: %s"
+            android:title="Scan Topic" />
+
+        <com.example.pedestrian.homeservicerobotofneu.BetterEditTextPreference
+            android:defaultValue="/map"
+            android:key="MAP_TOPIC_KEY"
+            android:singleLine="true"
+            android:summary="Topic that your Mengjia gets map information from.\nExpected message type: nav_msgs.OccupancyGrid\nValue: %s"
+            android:title="Map Topic" />
+
+        <com.example.pedestrian.homeservicerobotofneu.BetterEditTextPreference
+            android:defaultValue="/initialpose"
+            android:key="INITIAL_POSE_TOPIC_KEY"
+            android:singleLine="true"
+            android:summary="Topic that your Mengjia publishes initial pose on.\nExpected message type: geometry_msgs.PoseWithCovarianceStamped\nValue: %s"
+            android:title="Initial Pose Topic" />
+
+        <com.example.pedestrian.homeservicerobotofneu.BetterEditTextPreference
+            android:defaultValue="/move_base/DWAPlannerROS/global_plan"
+            android:key="GLOBAL_PLAN_TOPIC_KEY"
+            android:singleLine="true"
+            android:summary="Topic that your Mengjia gets global plan information from.\nExpected message type: nav_msgs.Path\nValue: %s"
+            android:title="Global Plan Topic" />
+
+        <com.example.pedestrian.homeservicerobotofneu.BetterEditTextPreference
+            android:defaultValue="/move_base/goal"
+            android:key="Goal_TOPIC_KEY"
+            android:singleLine="true"
+            android:summary="Topic that your Mengjia publishes goal information on.\nExpected message type: move_base_msgs.MoveBaseActionGoal\nValue: %s"
+            android:title="Goal Topic" />
+
+        <com.example.pedestrian.homeservicerobotofneu.BetterEditTextPreference
+            android:defaultValue="/move_base_simple/goal"
+            android:key="SIMPLE_GOAL_TOPIC_KEY"
+            android:singleLine="true"
+            android:summary="Topic that your Mengjia gets current pose information from.\nExpected message type: geometry_msgs.PoseStamped\nValue: %s"
+            android:title="Simple Goal Topic" />
+
+    </PreferenceScreen>
+
+    <!--<PreferenceScreen-->
+        <!--android:icon="@drawable/ic_warning_system"-->
+        <!--android:key="@string/prefs_warning_system_key"-->
+        <!--android:summary="@string/warning_pref_summary"-->
+        <!--android:title="@string/warning_pref_title">-->
+
+        <!--<SwitchPreference-->
+            <!--android:checked="true"-->
+            <!--android:defaultValue="true"-->
+            <!--android:key="@string/prefs_warning_checkbox_key"-->
+            <!--android:summaryOff="@string/warning_enable_pref_summary_off"-->
+            <!--android:summaryOn="@string/warning_enable_pref_summary_on"-->
+            <!--android:title="@string/warning_enable_pref_title" />-->
+
+        <!--<SwitchPreference-->
+            <!--android:checked="true"-->
+            <!--android:defaultValue="true"-->
+            <!--android:dependency="@string/prefs_warning_checkbox_key"-->
+            <!--android:key="@string/prefs_warning_safemode_key"-->
+            <!--android:summaryOff="@string/warning_safemode_pref_summary_off"-->
+            <!--android:summaryOn="@string/warning_safemode_pref_summary_on"-->
+            <!--android:title="@string/warning_safemode_pref_title" />-->
+
+        <!--<SwitchPreference-->
+            <!--android:checked="true"-->
+            <!--android:defaultValue="true"-->
+            <!--android:dependency="@string/prefs_warning_checkbox_key"-->
+            <!--android:key="@string/prefs_warning_beep_key"-->
+            <!--android:summaryOff="@string/warning_beep_pref_summary_off"-->
+            <!--android:summaryOn="@string/warning_beep_pref_summary_on"-->
+            <!--android:title="@string/warning_beep_pref_title" />-->
+
+        <!--<com.example.pedestrian.homeservicerobotofneu.BetterEditTextPreference-->
+            <!--android:defaultValue="@string/default_warning_mindist"-->
+            <!--android:dependency="@string/prefs_warning_checkbox_key"-->
+            <!--android:inputType="numberDecimal"-->
+            <!--android:key="@string/prefs_warning_mindist_key"-->
+            <!--android:singleLine="true"-->
+            <!--android:summary="@string/warning_mindist_pref_summary"-->
+            <!--android:title="@string/warning_mindist_pref_title" />-->
+
+    <!--</PreferenceScreen>-->
+
+    <!--<PreferenceScreen-->
+        <!--android:icon="@drawable/ic_settings_ethernet_black_24dp"-->
+        <!--android:key="@string/prefs_advanced_control_settings_key"-->
+        <!--android:summary="@string/prefs_advanced_control_settings_summary"-->
+        <!--android:title="@string/advanced_controls__pref_title">-->
+        <!--<com.example.pedestrian.homeservicerobotofneu.BetterEditTextPreference-->
+            <!--android:defaultValue="1"-->
+            <!--android:inputType="number"-->
+            <!--android:key="edittext_laser_scan_detail"-->
+            <!--android:singleLine="true"-->
+            <!--android:summary="@string/laser_scan_detail_pref_summary"-->
+            <!--android:title="@string/laser_scan_detail_pref_title" />-->
+
+        <!--<com.example.pedestrian.homeservicerobotofneu.BetterEditTextPreference-->
+            <!--android:defaultValue="2.0"-->
+            <!--android:inputType="numberDecimal"-->
+            <!--android:key="edittext_random_walk_range_proximity"-->
+            <!--android:singleLine="true"-->
+            <!--android:summary="@string/random_walk_range_minimum_pref_summary"-->
+            <!--android:title="@string/random_walk_range_minimum_pref_title" />-->
+
+        <!--<SwitchPreference-->
+            <!--android:checked="false"-->
+            <!--android:defaultValue="false"-->
+            <!--android:key="@string/prefs_reverse_angle_reading_key"-->
+            <!--android:summaryOff="@string/reverse_angle_reading_summary_off"-->
+            <!--android:summaryOn="@string/reverse_angle_reading_summary_on"-->
+            <!--android:title="@string/reverse_angle_reading_title" />-->
+
+        <!--<SwitchPreference-->
+            <!--android:checked="false"-->
+            <!--android:defaultValue="false"-->
+            <!--android:key="@string/prefs_invert_x_axis_key"-->
+            <!--android:summaryOff="@string/invert_x_axis_summary"-->
+            <!--android:summaryOn="@string/invert_x_axis_summary"-->
+            <!--android:title="@string/invert_x_axis_title" />-->
+
+        <!--<SwitchPreference-->
+            <!--android:checked="false"-->
+            <!--android:defaultValue="false"-->
+            <!--android:key="@string/prefs_invert_y_axis_key"-->
+            <!--android:summaryOff="@string/invert_y_axis_summary"-->
+            <!--android:summaryOn="@string/invert_y_axis_summary"-->
+            <!--android:title="@string/invert_y_axis_title" />-->
+
+        <!--<SwitchPreference-->
+            <!--android:checked="false"-->
+            <!--android:defaultValue="false"-->
+            <!--android:key="@string/prefs_invert_angular_velocity_key"-->
+            <!--android:summaryOff="@string/invert_angular_velocity_summary"-->
+            <!--android:summaryOn="@string/invert_angular_velocity_summary"-->
+            <!--android:title="@string/invert_angular_velocity_title" />-->
+    <!--</PreferenceScreen>-->
+
+</PreferenceScreen>

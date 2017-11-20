@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
+
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#eee"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/darker_gray"/>
+
+</android.support.v4.widget.DrawerLayout>

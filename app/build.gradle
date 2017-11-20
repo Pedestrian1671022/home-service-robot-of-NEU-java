@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.example.pedestrian.homeservicerobotofneu"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['Msc.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'org.ros.android_core:android_15:0.2.1'
+    implementation 'com.github.rosjava.android_remocons:common_tools:0.2.0'
+    //    implementation 'org.ros.rosjava_messages:audio_common_msgs:0.2.7'
+    implementation 'org.ros.rosjava_messages:move_base_msgs:1.12.7'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation files('libs/Msc.jar')
+}

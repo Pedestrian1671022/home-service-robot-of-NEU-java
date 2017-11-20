@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/robot_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="robot_name"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/robot_name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@id/robot_name_textview"
+            android:layout_toRightOf="@id/robot_name_textview"
+            android:hint="robot_name_hint"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/robot_masteruri_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/robot_name_textview"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="master_uri"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/master_uri_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/robot_name_edit_text"
+            android:layout_alignStart="@+id/robot_name_edit_text"
+            android:layout_below="@id/robot_name_textview"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@id/robot_masteruri_textview"
+            android:layout_toRightOf="@id/robot_masteruri_textview"
+            android:hint="master_uri_hint"
+            android:inputType="textUri"
+            android:singleLine="true" />
+
+        <CheckBox
+            android:id="@+id/advanced_options_checkbox_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/master_uri_edit_text"
+            android:text="@string/show_advanced_options" />
+
+        <LinearLayout
+            android:id="@+id/advanced_options_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/advanced_options_checkbox_view"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="PC Voice Topic:"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/pc_voice_topic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="PC Voice Topic"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Android Voice Topic:"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/android_voice_topic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="Android Voice Topic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Camera Topic:"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/camera_topic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="Camera Topic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Joystick Topic:"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/joystick_topic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="Joystick Topic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Odometry Topic:"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/odometry_topic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="Odometry Topic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Scan Topic:"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/scan_topic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="Scan Topic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Map Topic:"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/map_topic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="Map Topic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Initial Pose Topic:"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/initial_pose_topic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="Initial Pose Topic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Global Plan Topic:"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/global_plan_topic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="Global Plan Topic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Goal Topic:"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/goal_topic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="Goal Topic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Simple Goal Topic:"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/simple_goal_topic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="Simple Goal Topic" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>
